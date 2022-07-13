@@ -1,25 +1,39 @@
-function showMessage() {
-    let name = prompt('Как тебя зовут?')
-    alert (`Привет, ${name}! Давай посчитаем :)`);
+let showMessage = () =>{
+    let name=prompt('Как тебя зовут?')
+    alert(`Привет, ${name}! Давай посчитаем :)`);
 }
+
+const input1 = document.querySelector (".number1");
+const input2 = document.querySelector (".number2");
+const div = document.querySelector(".out");
+
+let result;
+
+function showResult() {
+    div.textContent = `Результат: ${result}`;
+}
+
 function sum() {
-    let a = prompt ('Введи первое слагаемое')
-    let b = prompt ('Введи второе слагаемое')
-    alert (`Результат: ${Number(a)+Number(b)}`);
+    result = Number(input1.value)+Number(input2.value);
+    showResult ();
 }
 
 function sub() {
-    let a = prompt ('Введи уменьшаемое')
-    let b = prompt ('Введи вычитаемое')
-    alert (`Результат: ${Number(a)-Number(b)}`);
+    result = Number(input1.value)-Number(input2.value);
+    showResult ();
 }
 function mult() {
-    let a = prompt ('Введи первый множитель')
-    let b = prompt ('Введи второй множитель')
-    alert (`Результат: ${Number(a)*Number(b)}`);
+    result = Number(input1.value)*Number(input2.value);
+    showResult ();
 }
 function division() {
-    let a = prompt ('Введи делимое')
-    let b = prompt ('Введи делитель')
-    alert (`Результат: ${Number(a)/Number(b)}`);
+    result = Number(input1.value)/Number(input2.value);
+    showResult ();
+}
+
+// функция для изменения фона div по клику //
+
+function ChangeBgC() {
+    let div = document.getElementsByClassName("color");
+    div[0].style.background = "blue";
 }

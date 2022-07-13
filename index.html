@@ -12,13 +12,17 @@
 <body>
     <div class="calc">
         <div class="name"><button class="btn btn_name" onclick="showMessage()">Как тебя зовут?</button></div>
+        <input class="number1" type="text" placeholder="Введите первое число">
+        <input class="number2" type="text" placeholder="Введите второе число">
         <div class="operations">
             <button class="btn" onclick="sum()">Сложить</button>
             <button class="btn" onclick="sub()">Вычесть</button>
             <button class="btn" onclick="mult()">Умножить</button>
             <button class="btn" onclick="division()">Разделить</button>
         </div>
+        <div class="out"></div>
     </div>
+    <div class="color" onclick="ChangeBgC()">Кликни меня</div>
     <script src="script.js"></script>
 </body>
 
