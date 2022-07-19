@@ -10,6 +10,14 @@
 </head>
 
 <body>
+    <div class="theme">
+        <label for="theme">Выбери тему:</label>
+        <select id="theme" name="color" onchange="changeTheme()">
+            <option value="default">По умолчанию</option>
+            <option value="dark">Темная</option>
+            <option value="light">Светлая</option>
+        </select>
+    </div>
     <div class="calc">
         <div class="name"><button class="btn btn_name" onclick="showMessage()">Как тебя зовут?</button></div>
         <input class="number1" type="text" placeholder="Введите первое число">
@@ -20,6 +28,7 @@
             <button class="btn" onclick="mult()">Умножить</button>
             <button class="btn" onclick="division()">Разделить</button>
         </div>
+        <div id="errorMessage"></div>
         <div class="out"></div>
     </div>
     <div class="color" onclick="ChangeBgC()">Кликни меня</div>
