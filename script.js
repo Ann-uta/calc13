@@ -14,6 +14,7 @@ function showResult() {
 }
 function clear(){
     document.getElementById('errorMessage').innerHTML="";
+    document.querySelector('.out').innerHTML="";
 }
 
 function sum() {
@@ -37,17 +38,19 @@ function division() {
     clear()
         if (input2.value == 0){
             document.getElementById('errorMessage').innerHTML = "На 0 делить нельзя!";
+            return false;
     } 
-        result = Number(input1.value)/Number(input2.value);
-        showResult ();             
-}
+    result = Number(input1.value)/Number(input2.value);
+        showResult ();  }
 
 
 // функция для изменения фона div по клику //
 
 function ChangeBgC() {
-    let div = document.getElementsByClassName("color");
-    div[0].style.background = "blue";
+    let div = document.querySelector ('.color').style.background = "blue";
+
+    /*let div = document.getElementsByClassName("color");
+    div[0].style.background = "blue";*/
 }
 
 // функции для изменения Темы //
